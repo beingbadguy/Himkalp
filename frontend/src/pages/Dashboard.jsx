@@ -102,9 +102,9 @@ const Dashboard = () => {
       </div>
 
       {/* Chart Section */}
-      <div className="mt-10 p-4">
+      {/* <div className="mt-10 p-4">
         <h2 className="text-xl font-semibold">Orders Over Time</h2>
-        <div className=" mt-4 ml-[-40px]">
+        <div className=" mt-4 ml-[-40px] z-0">
           <ResponsiveContainer width="100%" height={400}>
             <LineChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -121,7 +121,7 @@ const Dashboard = () => {
             </LineChart>
           </ResponsiveContainer>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
