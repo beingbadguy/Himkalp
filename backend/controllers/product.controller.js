@@ -29,7 +29,7 @@ export const createProduct = async (req, res) => {
     const imageUploadResult2 = await cloudinary.v2.uploader.upload(
       altFile.tempFilePath,
       {
-        folder: "products", // Optional: specify a folder in Cloudinary
+        folder: "himkalp_products", // Optional: specify a folder in Cloudinary
       }
     );
 

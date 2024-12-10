@@ -42,7 +42,7 @@ const Newsletter = () => {
         Join Our Newsletter
       </h2>
       <p className="text-gray-600 text-sm sm:text-lg">
-        Stay updated with exclusive offers and the latest jersey arrivals.
+        Stay updated with exclusive offers and the latest products arrivals.
       </p>
       {error ? <p className="text-red-500">{error}</p> : ""}
 

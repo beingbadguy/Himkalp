@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
 const Faq = ({
-  question = "What types of football jerseys do you offer?",
-  answer = "We offer a wide range of football jerseys, including those from popular leagues like the Premier League, La Liga, Serie A, and international teams. Our collection features both home and away kits for men, women, and children.",
+  question = "What is Globalize Herbal?",
+  answer = "Globalizeherbal is a trusted provider of Ayurvedic products and treatments from India.",
 }) => {
   const [collapse, setCollapse] = useState(false);
 
@@ -23,13 +23,15 @@ const Faq = ({
               <BsChevronDown
                 className={`transform ${collapse ? "rotate-180" : ""}`}
               />
-              <p>{question}</p>
+              <p className="uppercase">{question}</p>
             </div>
           </div>
           <div
             className={`${
-              collapse ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
-            } transition-all duration-300 ease-in-out overflow-hidden `}
+              collapse
+                ? "max-h-[1000px] opacity-100" // Use a large max-height value
+                : "max-h-0 opacity-0"
+            } transition-all duration-300 ease-in-out overflow-hidden`}
           >
             <p>{answer}</p>
           </div>

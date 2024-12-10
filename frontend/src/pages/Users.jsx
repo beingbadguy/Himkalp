@@ -39,7 +39,7 @@ const Users = () => {
           <input
             type="text"
             className="outline-none bg-transparent w-full"
-            placeholder="Cristiano Ronaldo"
+            placeholder="Enter the name..."
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);

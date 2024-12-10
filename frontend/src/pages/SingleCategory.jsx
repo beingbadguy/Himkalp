@@ -1,22 +1,42 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MdOutlineChevronRight } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserContext } from "../Context/UserContext";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 const SingleCategory = () => {
   const navigate = useNavigate();
-  const { data, user } = useContext(UserContext);
-  // console.log(data.products);
+  const { data, likeHandler, wishlist, user } = useContext(UserContext);
   const { id } = useParams();
+  const [likedProducts, setLikedProducts] = useState([]);
   const productList = data?.products?.filter(
     (product) => product.category.name === id
   );
-  // console.log(productList);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [navigate]);
+    // Update liked products based on the wishlist state
+    if (wishlist?.wishlist?.items) {
+      setLikedProducts(wishlist.wishlist.items.map((item) => item.product._id));
+    }
+  }, [id, wishlist]);
+
+  // Check if a product is liked
+  const isLiked = (productId) => likedProducts.includes(productId);
+
+  const handleLikeToggle = (productId) => {
+    if (!user) {
+      navigate("/login");
+    } else {
+      likeHandler(productId); // Call the likeHandler to update backend
+      // Optimistically update the UI by adding/removing from likedProducts
+      if (isLiked(productId)) {
+        setLikedProducts(likedProducts.filter((id) => id !== productId));
+      } else {
+        setLikedProducts([...likedProducts, productId]);
+      }
+    }
+  };
 
   return (
     <div className="min-h-[71vh] mt-16 sm:mt-0">
@@ -29,12 +49,12 @@ const SingleCategory = () => {
         </p>
         <MdOutlineChevronRight />
         <p className="text-gray-600">
-          Showing all the product of "
+          Showing all the products of "
           <span className="text-green-500 font-bold">{id}</span>"
         </p>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 mt-4 m-4">
-        {productList?.map((item, index) => (
+        {productList?.map((item) => (
           <div
             key={item._id}
             className="border rounded-md p-2 relative cursor-pointer"
@@ -42,7 +62,7 @@ const SingleCategory = () => {
             <div className="">
               <img
                 src={item.image}
-                alt=""
+                alt={item.name}
                 className="p-2 hover:scale-75 transition-all duration-500"
                 onClick={() => {
                   navigate(`/product/${item._id}`);
@@ -54,16 +74,13 @@ const SingleCategory = () => {
             <p className="text-green-500 font-bold">₹{item.price}</p>
             <div
               className="absolute top-3 right-3 bg-gray-100 rounded-full p-2 cursor-pointer"
-              onClick={() => {
-                // console.log()
-                if (!user) {
-                  navigate("/login");
-                } else {
-                  likeHandler(item._id);
-                }
-              }}
+              onClick={() => handleLikeToggle(item._id)} // Toggle like immediately
             >
-              <FaRegHeart className="text-xl sm:text-2xl text-black" />
+              {isLiked(item._id) ? (
+                <FaHeart className="text-red-500 text-xl sm:text-2xl" />
+              ) : (
+                <FaRegHeart className="text-xl sm:text-2xl text-black" />
+              )}
             </div>
           </div>
         ))}

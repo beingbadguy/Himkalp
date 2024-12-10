@@ -247,7 +247,7 @@ const Checkout = () => {
                           "₹" +
                           item.product.price * item.quantity}
                       </li>
-                      <li className="bg-green-200 w-[70px] flex items-center justify-center rounded-sm italic">
+                      <li className="bg-green-200 w-[70px] flex items-center justify-center rounded-sm italic hidden">
                         size: {item.size}
                       </li>
                     </div>

@@ -23,7 +23,7 @@ export const createCategory = async (req, res) => {
     const imageUploadResult = await cloudinary.v2.uploader.upload(
       file.tempFilePath,
       {
-        folder: "categories", // Optional: specify a folder in Cloudinary
+        folder: "himkalp_categories", // Optional: specify a folder in Cloudinary
       }
     );
     //create a new category

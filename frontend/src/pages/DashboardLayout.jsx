@@ -63,17 +63,15 @@ const DashboardLayout = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between w-full  h-[100vh] ">
+      <div className="flex justify-between w-full   ">
         <div className="md:w-[20%]  items-start   flex-col border shadow-xl hidden sm:flex">
           <div
             className=" flex items-center gap-2 p-2 mt-5"
             onClick={() => navigate("/")}
           >
-            <img src="./logo.svg" alt="" />
+            <img src="./himkalp_logo.png" alt="" className="h-8" />
 
-            <p className="font-bold text-xl hidden lg:block">
-              Jersey<span className="text-green-500">Nation</span>
-            </p>
+          
           </div>
           <hr className="w-full mt-6" />
           <div className="flex items-center justify-center  flex-col   w-full">

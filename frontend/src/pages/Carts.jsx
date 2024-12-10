@@ -80,7 +80,7 @@ const Carts = () => {
 
                 <div className="flex flex-col justify-between w-full gap-4">
                   <p className="font-bold">{item.product.name}</p>
-                  <p className=" bg-gray-100 w-[60px] text-black flex items-center justify-center rounded italic">
+                  <p className=" bg-gray-100 w-[60px] text-black flex items-center justify-center rounded italic hidden">
                     Size:{item?.size?.toUpperCase()}
                   </p>
                   <p className="font-bold text-green-600">

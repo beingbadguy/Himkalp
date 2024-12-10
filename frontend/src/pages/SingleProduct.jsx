@@ -1,13 +1,14 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { IoAdd, IoStarSharp } from "react-icons/io5";
-import { MdOutlineChevronRight } from "react-icons/md";
-import { RiShoppingBag3Line, RiSubtractLine } from "react-icons/ri";
-import { useNavigate, useParams } from "react-router-dom";
+import { RiShoppingBag3Line } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import { UserContext } from "../Context/UserContext";
-import { useEffect } from "react";
+import { MdOutlineChevronRight } from "react-icons/md";
+import { IoAdd, IoStarSharp } from "react-icons/io5";
+import { RiSubtractLine } from "react-icons/ri";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 const SingleProduct = () => {
   const queryClient = useQueryClient();
@@ -18,18 +19,20 @@ const SingleProduct = () => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState("md"); // Default value
+  const [likedProducts, setLikedProducts] = useState([]);
 
   const allProducts = data?.products;
   const wishArr = wishlist?.wishlist?.items;
-  // console.log(quantity);
-  const isLiked = (productId) => {
-    return wishArr?.some((item) => item.product._id === productId);
-  };
 
+  // Check if a product is liked
+  const isLiked = (productId) => likedProducts.includes(productId);
+
+  // Suggested products excluding the current product
   const suggestedProducts = allProducts?.filter(
     (product) => product._id !== id
   );
 
+  // Fetch single product data using react-query
   const { data: singleProduct } = useQuery({
     queryKey: ["product", id],
     queryFn: async () => {
@@ -41,17 +44,34 @@ const SingleProduct = () => {
     },
   });
   const product = singleProduct?.product;
-  // console.log(product?.category?.name);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setQuantity(1);
-  }, [id]);
+    // Update liked products based on the wishlist state
+    if (wishlist?.wishlist?.items) {
+      setLikedProducts(wishlist.wishlist.items.map((item) => item.product._id));
+    }
+  }, [id, wishlist]);
+
+  // Handle like toggle with optimistic UI update
+  const handleLikeToggle = (productId) => {
+    if (!user) {
+      navigate("/login");
+    } else {
+      likeHandler(productId); // Call the likeHandler to update backend
+      // Optimistically update the UI by adding/removing from likedProducts
+      if (isLiked(productId)) {
+        setLikedProducts(likedProducts.filter((id) => id !== productId));
+      } else {
+        setLikedProducts([...likedProducts, productId]);
+      }
+    }
+  };
 
   const jerseysize = ["xs", "sm", "md", "lg", "xl", "xxl"];
   const shoesize = ["6", "7", "8", "9", "10", "11", "12"];
   const footballsize = ["3", "4", "5", "6"];
-  // console.log(size);
 
   useEffect(() => {
     if (product) {
@@ -61,7 +81,6 @@ const SingleProduct = () => {
 
   return (
     <div className="min-h-[80vh] mt-16 sm:mt-0 mb-10">
-      {/* <hr /> */}
       <div className="mx-4 md:mx-10 flex items-center gap-2 mt-4">
         <p
           className="cursor-pointer text-black hover:underline"
@@ -79,6 +98,7 @@ const SingleProduct = () => {
         <MdOutlineChevronRight />
         <p className="text-green-500 font-semibold">{product?.name}</p>
       </div>
+
       <div className="flex items-center justify-center md:items-start md:justify-evenly flex-col md:flex-row my-4 p-4">
         <div className="w-full md:w-[50%] flex items-center justify-center mb-4">
           <img
@@ -106,8 +126,9 @@ const SingleProduct = () => {
           </div>
           <p className="text-gray-700">{product?.description}</p>
           <p className="text-xl font-bold">Stock: {product?.quantity}</p>
+
           <div
-            className={` ${
+            className={`${
               product?.category?.name === "Cleats" ? "" : "hidden"
             } ${
               product?.category?.name === "Football" ? "hidden" : ""
@@ -116,12 +137,10 @@ const SingleProduct = () => {
             {shoesize.map((_, i) => (
               <div
                 key={i}
-                className={` ${
+                className={`${
                   size === _ ? "bg-green-500 text-white" : ""
-                } bg-gray-100 p-2 rounded cursor-pointer `}
-                onClick={() => {
-                  setSize(_);
-                }}
+                } bg-gray-100 p-2 rounded cursor-pointer`}
+                onClick={() => setSize(_)}
               >
                 {_.toUpperCase()}
               </div>
@@ -129,21 +148,19 @@ const SingleProduct = () => {
           </div>
 
           <div
-            className={` ${
+            className={`${
               product?.category?.name !== "Cleats" ? "" : "hidden"
             }${
               product?.category?.name === "Football" ? "hidden" : ""
-            }  flex gap-4 p-2`}
+            }  flex gap-4 p-2 hidden`}
           >
             {jerseysize.map((_, i) => (
               <div
                 key={i}
-                className={` ${
+                className={`${
                   size === _ ? "bg-green-500 text-white" : ""
-                } bg-gray-100 p-2 rounded cursor-pointer `}
-                onClick={() => {
-                  setSize(_);
-                }}
+                } bg-gray-100 p-2 rounded cursor-pointer`}
+                onClick={() => setSize(_)}
               >
                 {_.toUpperCase()}
               </div>
@@ -154,9 +171,7 @@ const SingleProduct = () => {
           <div className="flex items-center">
             <div
               className="bg-gray-100 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full"
-              onClick={() => {
-                if (quantity > 1) setQuantity(quantity - 1);
-              }}
+              onClick={() => quantity > 1 && setQuantity(quantity - 1)}
             >
               <RiSubtractLine />
             </div>
@@ -170,41 +185,34 @@ const SingleProduct = () => {
               <IoAdd />
             </div>
           </div>
+
           <div className="flex items-center md:mt-0 py-2">
-            <div className="flex items-center justify-between gap-2 w-full">
-              <div
-                className="bg-black flex items-center justify-center text-white gap-2 rounded-md p-2 w-full cursor-pointer     hover:scale-90 transition-all duration-500"
-                onClick={() => {
-                  if (!user) {
-                    navigate("/login");
-                  } else {
-                    AddToCart.mutate({
-                      productId: product?._id,
-                      quantity,
-                      size,
-                    });
-                  }
-                }}
-              >
-                <RiShoppingBag3Line />
-                Add to cart
-              </div>
-              <div
-                className="bg-gray-200 p-3 rounded-md cursor-pointer hover:bg-white hover:text-red-500 transition-all"
-                onClick={() => {
-                  if (!user) {
-                    navigate("/login");
-                  } else {
-                    likeHandler(product?._id);
-                  }
-                }}
-              >
-                {isLiked(product?._id) ? (
-                  <FaHeart className="text-red-500" />
-                ) : (
-                  <FaRegHeart />
-                )}
-              </div>
+            <div
+              className="bg-black flex items-center justify-center text-white gap-2 rounded-md p-2 w-full cursor-pointer hover:scale-90 transition-all duration-500"
+              onClick={() => {
+                if (!user) {
+                  navigate("/login");
+                } else {
+                  AddToCart.mutate({
+                    productId: product?._id,
+                    quantity,
+                    size,
+                  });
+                }
+              }}
+            >
+              <RiShoppingBag3Line />
+              Add to cart
+            </div>
+            <div
+              className="bg-gray-200 p-3 rounded-md cursor-pointer hover:bg-white hover:text-red-500 transition-all ml-2"
+              onClick={() => handleLikeToggle(product?._id)} // Toggle like immediately
+            >
+              {isLiked(product?._id) ? (
+                <FaHeart className="text-red-500" />
+              ) : (
+                <FaRegHeart />
+              )}
             </div>
           </div>
         </div>
@@ -234,13 +242,7 @@ const SingleProduct = () => {
               <p className="text-green-500 font-bold">₹{item.price}</p>
               <div
                 className="absolute top-3 right-3 bg-gray-100 rounded-full p-2 cursor-pointer"
-                onClick={() => {
-                  if (!user) {
-                    navigate("/login");
-                  } else {
-                    likeHandler(product?._id);
-                  }
-                }}
+                onClick={() => handleLikeToggle(item._id)} // Toggle like immediately
               >
                 {isLiked(item._id) ? (
                   <FaHeart className="text-red-500" />

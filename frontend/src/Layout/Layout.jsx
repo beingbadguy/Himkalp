@@ -42,9 +42,7 @@ const Layout = () => {
           className="flex justify-center items-center gap-1 cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <p className="font-bold text-xl">
-            Jersey<span className="text-green-500">Nation</span>
-          </p>
+          <img src="./himkalp_logo.png" alt="logo" className="h-8" />
         </div>
         {/* search */}
         <div className="flex items-center justify-center border p-2 gap-2 sm:w-[50%] rounded border-gray-300 bg-gray-100 absolute top-[70px] w-[96%] sm:static left-2">
@@ -52,7 +50,7 @@ const Layout = () => {
           <input
             type="text"
             className="outline-none rounded-md w-full bg-transparent"
-            placeholder="Real Madrid Kit"
+            placeholder="Enter product name..."
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
@@ -176,12 +174,10 @@ const Layout = () => {
       >
         <div className="flex flex-col items-center text-center sm:text-left sm:flex-row justify-between">
           <div className="flex items-center gap-1">
-            <p className="font-bold text-2xl">
-              Jersey<span className="text-yellow-300">Nation</span>
-            </p>
+            <img src="./himkalp_logo.png" alt="" className="bg-white h-8" />
           </div>
           <p className="text-sm italic mt-2 sm:mt-0">
-            "Your one-stop shop for premium football jerseys!"
+            "Your trusted source for natural Ayurvedic wellness products!"
           </p>
         </div>
 
@@ -189,7 +185,7 @@ const Layout = () => {
 
         <div className="flex flex-col sm:flex-row justify-between items-center text-sm mt-4 space-y-2 sm:space-y-0">
           <div>
-            © {new Date().getFullYear()} JerseyNation. All Rights Reserved.
+            © {new Date().getFullYear()} Himkalp. All Rights Reserved.
           </div>
           <div className="flex space-x-4 text-2xl">
             <a

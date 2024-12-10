@@ -57,7 +57,7 @@ const Products = () => {
           <input
             type="text"
             className="outline-none bg-transparent w-full"
-            placeholder="Real Madrid Jersey"
+            placeholder="Enter the product..."
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
