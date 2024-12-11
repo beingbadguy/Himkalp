@@ -19,7 +19,7 @@ const Newsletter = () => {
     },
 
     onSuccess: (data) => {
-      console.log(data);
+      // console.log(data);
       setUseremail("");
       setError("Newsletter subscription successful");
       console.log("Newsletter subscription successful");

@@ -1,10 +1,13 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { createContext, useState } from "react";
+import ConsultData from "../data.json";
 
 export const UserContext = createContext();
 
 const MainContext = ({ children }) => {
+  const [consult, setConsult] = useState(ConsultData);
+
   const queryClient = useQueryClient();
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("JerseyNation"))
@@ -102,6 +105,7 @@ const MainContext = ({ children }) => {
         allCategories,
         cart,
         AddToCart,
+        consult,
       }}
     >
       {children}

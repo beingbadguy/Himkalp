@@ -11,6 +11,8 @@ import Hero from "./components/Hero";
 import OffersMarquee from "./components/OffersMarquee";
 import { useNavigate } from "react-router-dom";
 import Hero2 from "./components/Hero2";
+import Slider from "./components/Slider";
+import Consultation from "./components/Consultation";
 
 const App = () => {
   // const { wishlist } = useContext(UserContext);
@@ -24,6 +26,7 @@ const App = () => {
       {/* <p>This is the react app</p> */}
       {/* <Gallery /> */}
       {/* <Hero /> */}
+      <Slider />
       <Hero2 />
       <ShopCategories />
       <OffersMarquee />
@@ -33,6 +36,7 @@ const App = () => {
         alt=""
         className="h-[400px] object-cover w-full brightness-75"
       />
+      <Consultation />
       {/* <Popular /> */}
       <div className="flex flex-col items-center justify-center gap-1">
         <p className=" text-2xl sm:text-3xl my-4 mt-10">

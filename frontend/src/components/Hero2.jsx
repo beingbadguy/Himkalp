@@ -12,7 +12,7 @@ const Hero2 = () => {
   const navigate = useNavigate();
 
   return (
-    <div className=" mt-2 h-[500px] flex flex-col items-center justify-center gap-5 ">
+    <div className=" mt-2 h-[450px] flex flex-col items-center justify-center gap-5 ">
       <div className="flex items-center  p-1 gap-1 bg-green-50 text-green-500 shadow-inner rounded-md">
         Ayurvedic Season <GiHerbsBundle />
       </div>

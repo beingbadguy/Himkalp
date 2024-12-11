@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
 const Faq = ({
-  question = "What is Globalize Herbal?",
-  answer = "Globalizeherbal is a trusted provider of Ayurvedic products and treatments from India.",
+  question = "What is Himkalp?",
+  answer = "Himkalp is a trusted provider of Ayurvedic products and treatments from India.",
 }) => {
   const [collapse, setCollapse] = useState(false);
 

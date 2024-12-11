@@ -28,6 +28,10 @@ import User from "./pages/User.jsx";
 import Confirm from "./pages/Confirm.jsx";
 import UserOrder from "./pages/UserOrder.jsx";
 import Errorpage from "./pages/Errorpage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import ConsulatinPage from "./pages/ConsulatinPage.jsx";
+import SingleConsultationPage from "./pages/SingleConsultationPage.jsx";
 
 // Set axios to include credentials in every request
 axios.defaults.withCredentials = true;
@@ -76,6 +80,22 @@ const router = createBrowserRouter([
       {
         path: "user",
         element: <User />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "consult",
+        element: <ConsulatinPage />,
+      },
+      {
+        path: "consult/:name",
+        element: <SingleConsultationPage />,
       },
 
       {
