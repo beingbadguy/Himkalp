@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { FiChrome } from "react-icons/fi";
-
+import logo from "../../public/himkalp_logo.png";
 const DashboardLayout = () => {
   const menuBar = [
     {
@@ -69,9 +69,7 @@ const DashboardLayout = () => {
             className=" flex items-center gap-2 p-2 mt-5"
             onClick={() => navigate("/")}
           >
-            <img src="./himkalp_logo.png" alt="" className="h-8" />
-
-          
+            <img src={logo} alt="" className="h-8" />
           </div>
           <hr className="w-full mt-6" />
           <div className="flex items-center justify-center  flex-col   w-full">

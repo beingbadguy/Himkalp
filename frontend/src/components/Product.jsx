@@ -19,11 +19,11 @@ const Product = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 mt-4">
         {data?.products?.map((item) => (
           <div key={item._id} className="border rounded-md p-2 relative ">
-            <div>
+            <div className="flex items-center justify-center">
               <img
                 src={item.image}
                 alt={item.name}
-                className="p-2 hover:scale-75 transition-all duration-500 cursor-pointer"
+                className="p-2 hover:scale-75 transition-all duration-500 cursor-pointer  h-72 "
                 onClick={() => navigate(`/product/${item._id}`)}
               />
             </div>

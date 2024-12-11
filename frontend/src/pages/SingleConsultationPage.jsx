@@ -32,9 +32,9 @@ const SingleConsultationPage = () => {
         <img
           src={consultation?.image}
           alt=""
-          className="w-full h-48 object-cover"
+          className="w-full h-48 object-cover mt-2"
         />
-        <h1 className="text-4xl my-10 font-bold text-green-500">{name}</h1>
+        <h1 className="text-4xl mt-4 font-bold text-green-500">{name}</h1>
         <p className="p-4">{consultation?.description}</p>
       </div>
       <div>
@@ -77,9 +77,9 @@ const SingleConsultationPage = () => {
               </p>
             </div>
           </div>
-          <div>
-            <div className=" flex items-start justify-center flex-col md:block ">
-              <h1 className=" font-bold text-3xl text-green-500 mb-2">
+          <div className="mr-2">
+            <div className=" flex items-start justify-center flex-col md:block  ">
+              <h1 className="font-bold text-3xl text-green-500 mb-2">
                 Address & Info
               </h1>
 
