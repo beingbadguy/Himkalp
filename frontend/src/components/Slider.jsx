@@ -11,44 +11,37 @@ const Slider = () => {
   const categories = [
     {
       id: 1,
-      name: "Mountain",
-      image:
-        "https://images.unsplash.com/photo-1573527426230-e1bf3991196b?q=80&w=2524&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "SwamiJi",
+      image: "./yogi.png ",
+      bgColor: "bg-cyan-100",
+    },
+    {
+      id: 2,
+      name: "Ankit",
+      image: "./ankit.png",
+      bgColor: "bg-rose-100",
+    },
+
+    {
+      id: 2,
+      name: "Him",
+      image: "./him.png",
       bgColor: "bg-rose-100",
     },
     {
       id: 2,
-      name: "SwamiJi",
-      image: "./swamiji.jpg ",
-      bgColor: "bg-cyan-100",
+      name: "Mountain",
+      image:
+        "./Teach.png",
+      bgColor: "bg-rose-100",
     },
+
     {
       id: 3,
       name: "Waterfall",
       image:
         "https://images.unsplash.com/photo-1494645009625-cc17363a5f20?q=80&w=2590&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       bgColor: "bg-purple-100",
-    },
-    {
-      id: 4,
-      name: "Cow",
-      image:
-        "https://images.unsplash.com/photo-1723450864895-c48b45c6c9f7?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bgColor: "bg-orange-100",
-    },
-    {
-      id: 4,
-      name: "jadibuti",
-      image:
-        "https://images.unsplash.com/photo-1492552296703-4ec0a2fb3715?q=80&w=2697&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bgColor: "bg-orange-100",
-    },
-    {
-      id: 4,
-      name: "Sadhu",
-      image:
-        "https://images.unsplash.com/photo-1544743785-0e2c0e641189?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bgColor: "bg-orange-100",
     },
   ];
 

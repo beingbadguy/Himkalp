@@ -9,6 +9,7 @@ import { RiSubtractLine } from "react-icons/ri";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
+import OrderPlaceWhatsapp from "../components/OrderPlaceWhatsapp";
 
 const SingleProduct = () => {
   const queryClient = useQueryClient();
@@ -79,6 +80,8 @@ const SingleProduct = () => {
     }
   }, [product]);
 
+  console.log(product?.name);
+
   return (
     <div className="min-h-[80vh] mt-16 sm:mt-0 mb-10">
       <div className="mx-4 md:mx-10 flex items-center gap-2 mt-4">
@@ -104,7 +107,7 @@ const SingleProduct = () => {
           <img
             src={product?.image}
             alt={product?.name}
-            className="border p-4 rounded-md md:h-[450px] max-w-full object-contain"
+            className="border p-4 rounded-md h-[300px] md:h-[450px] max-w-full object-contain"
           />
         </div>
         <div className="w-[90%] md:w-[40%] flex flex-col gap-4 justify-between">
@@ -185,6 +188,8 @@ const SingleProduct = () => {
               <IoAdd />
             </div>
           </div>
+
+          <OrderPlaceWhatsapp content={product?.name} />
 
           <div className="flex items-center md:mt-0 py-2">
             <div
