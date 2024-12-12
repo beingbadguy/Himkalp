@@ -1,10 +1,16 @@
 import React, { useContext, useState, useEffect } from "react";
-import { FaRegHeart, FaHeart } from "react-icons/fa";
+import {
+  FaRegHeart,
+  FaHeart,
+  FaSearchMinus,
+  FaSearchPlus,
+  FaTimes,
+} from "react-icons/fa";
 import { RiShoppingBag3Line } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../Context/UserContext";
 import { MdOutlineChevronRight } from "react-icons/md";
-import { IoAdd, IoStarSharp } from "react-icons/io5";
+import { IoAdd, IoCloseOutline, IoStarSharp } from "react-icons/io5";
 import { RiSubtractLine } from "react-icons/ri";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -80,10 +86,45 @@ const SingleProduct = () => {
     }
   }, [product]);
 
-  console.log(product?.name);
+  // console.log(product?.name);
+
+  const [isImageOverview, setIsImageOverview] = useState(false);
+  const [imageZoom, setImageZoom] = useState(1);
 
   return (
     <div className="min-h-[80vh] mt-16 sm:mt-0 mb-10">
+      {isImageOverview && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <div className="relative">
+            <IoCloseOutline
+              className="absolute top-6 bg-gray-200 rounded-full right-5  text-black text-2xl cursor-pointer z-[999]"
+              onClick={() => setIsImageOverview(false)}
+            />
+            <img
+              src={product?.image}
+              alt={product?.name}
+              style={{ transform: `scale(${imageZoom})` }}
+              className="rounded-md object-contain bg-white transition-transform duration-300 max-h-[70vh]"
+            />
+            {/* <div className="flex gap-4 justify-center mt-4">
+              <button
+                className="bg-gray-200 p-2 rounded-full text-black hover:bg-gray-300"
+                onClick={() => setImageZoom((prev) => Math.max(prev - 0.1, 1))}
+              >
+                <FaSearchMinus />
+              </button>
+              <button
+                className="bg-gray-200 p-2 rounded-full text-black hover:bg-gray-300"
+                onClick={() => setImageZoom((prev) => Math.min(prev + 0.1, 2))}
+              >
+                <FaSearchPlus />
+              </button>
+            </div> */}
+          </div>
+        </div>
+      )}
+
+      {/* section starts from here  */}
       <div className="mx-4 md:mx-10 flex items-center gap-2 mt-4">
         <p
           className="cursor-pointer text-black hover:underline"
@@ -108,6 +149,7 @@ const SingleProduct = () => {
             src={product?.image}
             alt={product?.name}
             className="border p-4 rounded-md h-[300px] md:h-[450px] max-w-full object-contain"
+            onClick={() => setIsImageOverview(true)}
           />
         </div>
         <div className="w-[90%] md:w-[40%] flex flex-col gap-4 justify-between">
