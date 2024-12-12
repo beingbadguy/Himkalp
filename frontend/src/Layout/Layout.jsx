@@ -15,6 +15,7 @@ import {
   MdOutlineClose,
   MdOutlineDashboard,
   MdOutlineLocalPhone,
+  MdOutlineMailOutline,
   MdOutlinePhoneInTalk,
   MdOutlineSettingsPhone,
 } from "react-icons/md";
@@ -297,6 +298,10 @@ const Layout = () => {
           <div className="flex items-center gap-1">
             <MdOutlineLocalPhone />
             <p> Contact: +91 9634178864 (Ankit Yogi)</p>
+          </div>
+          <div className="flex items-center gap-1">
+            <MdOutlineMailOutline />
+            <p> Email: himkalpayurveda@gmail.com</p>
           </div>
         </div>
         <div className="grid grid-cols-1">

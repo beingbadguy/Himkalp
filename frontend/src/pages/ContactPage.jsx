@@ -50,7 +50,7 @@ const ContactPage = () => {
                   href="mailto:globalizeherbal@gmail.com"
                   className="text-gray-600 cursor-pointer"
                 >
-                  globalizeherbal@gmail.com
+                  himkalpayurveda@gmail.com
                 </a>
               </div>
             </div>
