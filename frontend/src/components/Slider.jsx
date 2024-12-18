@@ -12,7 +12,7 @@ const Slider = () => {
     {
       id: 1,
       name: "SwamiJi",
-      image: "./yogi.png ",
+      image: "./Swami.png ",
       bgColor: "bg-cyan-100",
     },
     {
@@ -31,8 +31,7 @@ const Slider = () => {
     {
       id: 2,
       name: "Mountain",
-      image:
-        "./Teach.png",
+      image: "./Teach.png",
       bgColor: "bg-rose-100",
     },
 

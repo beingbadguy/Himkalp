@@ -27,6 +27,7 @@ const SingleProduct = () => {
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState("md"); // Default value
   const [likedProducts, setLikedProducts] = useState([]);
+  const [isQrOverlay, setIsQrOverlay] = useState(false);
 
   const allProducts = data?.products;
   const wishArr = wishlist?.wishlist?.items;
@@ -93,6 +94,22 @@ const SingleProduct = () => {
 
   return (
     <div className="min-h-[80vh] mt-16 sm:mt-0 mb-10">
+      {/* QR Overlay */}
+      {isQrOverlay && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <div className="relative bg-white p-4 rounded-lg">
+            <IoCloseOutline
+              className="absolute top-4 right-4 text-2xl cursor-pointer text-black"
+              onClick={() => setIsQrOverlay(false)}
+            />
+            <img src="/image.png" alt="QR Code" className="max-w-xs mx-auto" />
+            <p className="text-center font-bold">
+              Pay & Send Screenshot to our whatsapp
+            </p>
+          </div>
+        </div>
+      )}
+
       {isImageOverview && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
           <div className="relative">
@@ -106,25 +123,11 @@ const SingleProduct = () => {
               style={{ transform: `scale(${imageZoom})` }}
               className="rounded-md object-contain bg-white transition-transform duration-300 max-h-[70vh]"
             />
-            {/* <div className="flex gap-4 justify-center mt-4">
-              <button
-                className="bg-gray-200 p-2 rounded-full text-black hover:bg-gray-300"
-                onClick={() => setImageZoom((prev) => Math.max(prev - 0.1, 1))}
-              >
-                <FaSearchMinus />
-              </button>
-              <button
-                className="bg-gray-200 p-2 rounded-full text-black hover:bg-gray-300"
-                onClick={() => setImageZoom((prev) => Math.min(prev + 0.1, 2))}
-              >
-                <FaSearchPlus />
-              </button>
-            </div> */}
           </div>
         </div>
       )}
 
-      {/* section starts from here  */}
+      {/* Section starts from here  */}
       <div className="mx-4 md:mx-10 flex items-center gap-2 mt-4">
         <p
           className="cursor-pointer text-black hover:underline"
@@ -172,46 +175,6 @@ const SingleProduct = () => {
           <p className="text-gray-700">{product?.description}</p>
           <p className="text-xl font-bold">Stock: {product?.quantity}</p>
 
-          <div
-            className={`${
-              product?.category?.name === "Cleats" ? "" : "hidden"
-            } ${
-              product?.category?.name === "Football" ? "hidden" : ""
-            } flex gap-4 p-2`}
-          >
-            {shoesize.map((_, i) => (
-              <div
-                key={i}
-                className={`${
-                  size === _ ? "bg-green-500 text-white" : ""
-                } bg-gray-100 p-2 rounded cursor-pointer`}
-                onClick={() => setSize(_)}
-              >
-                {_.toUpperCase()}
-              </div>
-            ))}
-          </div>
-
-          <div
-            className={`${
-              product?.category?.name !== "Cleats" ? "" : "hidden"
-            }${
-              product?.category?.name === "Football" ? "hidden" : ""
-            }  flex gap-4 p-2 hidden`}
-          >
-            {jerseysize.map((_, i) => (
-              <div
-                key={i}
-                className={`${
-                  size === _ ? "bg-green-500 text-white" : ""
-                } bg-gray-100 p-2 rounded cursor-pointer`}
-                onClick={() => setSize(_)}
-              >
-                {_.toUpperCase()}
-              </div>
-            ))}
-          </div>
-
           <hr />
           <div className="flex items-center">
             <div
@@ -232,6 +195,14 @@ const SingleProduct = () => {
           </div>
 
           <OrderPlaceWhatsapp content={product?.name} />
+
+          <div
+            className="bg-black flex items-center justify-center text-white gap-2 rounded-md p-2 w-full cursor-pointer hover:scale-90 transition-all duration-500 mt-4"
+            onClick={() => setIsQrOverlay(true)}
+          >
+            <RiShoppingBag3Line />
+            Pay Using QR
+          </div>
 
           <div className="flex items-center md:mt-0 py-2">
             <div

@@ -1,79 +1,347 @@
 {
   "categories": [
     {
+      "name": "Fever",
+      "description": "High body temperature due to various infections.",
+      "image": "https://images.unsplash.com/photo-1580917922805-f8f57e08c0ae?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Common Cold",
+      "description": "Viral infection affecting the respiratory tract.",
+      "image": "https://images.unsplash.com/photo-1529386317747-0a2a51add902?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Insomnia",
+      "description": "Difficulty falling or staying asleep.",
+      "image": "https://images.unsplash.com/photo-1721815731590-d4aae3a7fc9f?q=80&w=2612&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Tuberculosis",
+      "description": "Infectious disease primarily affecting the lungs.",
+      "image": "https://www.metropolisindia.com/upgrade/blog/upload/24/01/Tuberculosis1705674281.webp"
+    },
+    {
+      "name": "Sneezing",
+      "description": "Reflex action to clear nasal passages.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyali_Zvit-fPZ2Jf56ZuIpoAsjsT2LGvnlA&s"
+    },
+    {
+      "name": "Typhoid",
+      "description": "Bacterial infection causing fever and weakness.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsSMtGz5jKaOhjN35RPnjO3yKcls4xfyPyQ&s"
+    },
+    {
+      "name": "Malaria",
+      "description": "Mosquito-borne disease causing fever and chills.",
+      "image": "https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2021/10/shutterstock_1483138139-1.jpg"
+    },
+    {
+      "name": "Dengue",
+      "description": "Viral infection spread by mosquitoes causing high fever.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJN48j9u5fdWyy0ynFGmUzAeu_8uGfquVtQA&s"
+    },
+    {
+      "name": "Anemia",
+      "description": "Condition marked by low red blood cells.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNgbkuEJL6rilzmEzkxZDu6OC6oTA1kd-IxA&s"
+    },
+    {
+      "name": "Hernia",
+      "description": "Bulging of an organ through the abdominal wall.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqwHil_mMlXdfc21KrqLjVoQhptY_uphFJgw&s"
+    },
+    {
+      "name": "Autism",
+      "description": "Developmental disorder affecting communication and behavior.",
+      "image": "https://www.diyafoundation-india.org/wp-content/uploads/2021/12/autism.jpg"
+    },
+    {
+      "name": "Toothache",
+      "description": "Pain around the teeth or gums.",
+      "image": "https://www.doctor32.com/pages/Toothache.jpg"
+    },
+    {
+      "name": "Chest Pain",
+      "description": "Discomfort in the chest due to various causes.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_wwTZADRASo7LOLyNihxkKUvwr79x7KVohQ&s"
+    },
+    {
+      "name": "Back Pain",
+      "description": "Pain or discomfort in the back region.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwbzfy5G_Gor9r1dl03WoNO4EFLIvhERjQw&s"
+    },
+    {
+      "name": "Psoriasis",
+      "description": "Chronic autoimmune skin condition.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMu-IqyLdAbSOhNYeFqaFmyWw1oLE6f7vwEg&s"
+    },
+    {
+      "name": "Liver Cirrhosis",
+      "description": "Chronic liver damage leading to scarring.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTny9OThTmFlKlii9beSN3xb3yYnce2IDD6gA&s"
+    },
+    {
+      "name": "Constipation",
+      "description": "Difficulty in passing stool regularly.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tE3Fpzvb8Z_XCG6wgbRvPdmMuZa9Lzu6KA&s"
+    },
+    {
+      "name": "Liver Cancer",
+      "description": "Cancer that originates in the liver.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5pbxmKKpZqbjPqI3W1Vcjy6_7EqzCp85oeQ&s"
+    },
+    {
+      "name": "Breast Cancer",
+      "description": "Cancer developing in breast tissue.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAuxgvvQaUx0A8WES-WwyLYUQ0dLMWvTNg-g&s"
+    },
+    {
+      "name": "Lung Cancer",
+      "description": "Cancer that starts in the lungs.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeih35XF2A9vqhBxhNG8pRZ8U7m2yY1WNgzw&s"
+    },
+    {
+      "name": "Prostate Cancer",
+      "description": "Cancer in the prostate gland of men.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0SAJazLWzy2Giq_4RvNznmgCmuKFjnGwXw&s"
+    },
+    {
+      "name": "Hepatitis",
+      "description": "Inflammation of the liver, often viral.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuIBgfE1v9erekaHnOJeXW63lueb0pyXtYGw&s"
+    },
+    {
+      "name": "Gallstones",
+      "description": "Hardened deposits in the gallbladder.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsc_DznVJSJDf5QmQ5Mb2YPOfVV8_rcNxqXg&s"
+    },
+    {
+      "name": "High Blood Pressure",
+      "description": "Hypertension causing cardiovascular risks.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUOLVk58e3S4wbM6cC-i5bjzeoApLDWbphHg&s"
+    },
+    {
+      "name": "Epilepsy",
+      "description": "Neurological disorder causing seizures.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxq6AqheveBgrb2aCEYLIpc9Girqp03r3zKw&s"
+    },
+    {
+      "name": "Skin Cancer",
+      "description": "Abnormal growth of skin cells.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNJ11eoMDoJ2AleYE_oq_79wXLp0-nYthOXg&s"
+    },
+    {
+      "name": "Dehydration",
+      "description": "Loss of fluids causing imbalance in the body.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5r98rJdd9BaU8v8Q3fgL3YmEQ_ACcC1YyUA&s"
+    },
+    {
+      "name": "Gastric Problem/Indigestion",
+      "description": "Digestive discomfort after eating.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp8BjGxcsOyisbbPo9G7pgocwhrZD5YOmMBw&s"
+    },
+    {
+      "name": "Gout",
+      "description": "Painful inflammation in joints caused by uric acid.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgDWYpX-KVEOy3lsFHHz4vex4DkUV8Pbi1xw&s"
+    },
+
+    {
+      "name": "Leprosy",
+      "description": "Chronic infectious disease affecting nerves and skin.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZm4Ac2ubM12uvORupKForu0PLXI2GdH2iw&s"
+    },
+    {
+      "name": "Allergy",
+      "description": "Immune system reaction to foreign substances.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooWeMiHouUR65oscpyJMCegODeuTReCEqiw&s"
+    },
+    {
+      "name": "Jaundice",
+      "description": "Yellowing of skin due to liver issues.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBBF2O-jeZrRenr8HS1TR_QW0DzIUir3UKwQ&s"
+    },
+    {
+      "name": "Snoring",
+      "description": "Noisy breathing during sleep.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLqusvkSEfqmb3VC49nrgcW3GyO7vSYXdTnQ&s"
+    },
+    {
+      "name": "Filariasis",
+      "description": "Parasitic disease spread by mosquitoes.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7DXhQ_dptfxQ3pQ6vUD1nscckY6Y2d-dnw&s"
+    },
+    {
+      "name": "Kidney Stones",
+      "description": "Solid masses in kidneys causing pain.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYXLIZrxKwwtVjSAs1Dj-ETVSh1xp-JjXNg&s"
+    },
+    {
+      "name": "Irritable Bowel Syndrome (IBS)",
+      "description": "Chronic disorder affecting the digestive system.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3AGiW9pnDEGE4_nta0xodNT2JQizefJi5iA&s"
+    },
+    {
+      "name": "Pimples",
+      "description": "Small inflamed spots on the skin.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR20RVlMgTRdAZ4cHyVfwgKvfH9q_A8Yc4zqQ&s"
+    },
+
+    {
+      "name": "Height Growth",
+      "description": "Enhancing natural body height through exercises.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6s-ZV3YU3V_2arijth2-8puCatyCE4Rp-Tw&s"
+    },
+    {
+      "name": "Joint Pain",
+      "description": "Pain in joints caused by aging or injury.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXvT3cda6JLFVRlG9voA6uhpXA3H0A3qsvfg&s"
+    },
+    {
+      "name": "Liver Care",
+      "description": "Maintenance and health of liver function.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT__xyq0CYhc-x69k2FdDZUGRDJl4AU9_fCw&s"
+    },
+    {
+      "name": "Obesity",
+      "description": "Excess body weight and fat accumulation.",
+      "image": "https://omnihospitals.in/wp-content/uploads/2024/03/Obesity-Blog-Banner-700x300px.jpg"
+    },
+    {
+      "name": "Vitiligo",
+      "description": "Loss of skin color in blotches.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPJ8Eu0sFK34fJJcxtv4JkR3QZPYumYmsnhA&s"
+    },
+    {
+      "name": "Acid Reflux",
+      "description": "Backflow of stomach acid into the esophagus.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyJ9hC6sjgHtRsgRF6MUGoZjQ1C8CylYSf1A&s"
+    },
+    {
+      "name": "Breast Enhancement",
+      "description": "Improvement in the size or shape of breasts.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR078hpYTr5f6I8iC_7A9u5k_SjmAwKU0Rwag&s"
+    },
+    {
+      "name": "Weight Loss",
+      "description": "Reducing body weight through diet or exercise.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCyu1Yfi67jsFxwuNd_9MwaiiiMt7_ZNouYw&s"
+    },
+    {
+      "name": "Diet and Nutrition",
+      "description": "Balancing meals for optimal health.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgebmIvPqy9RP8snwj_5_cudTscrO3rU7iIQ&s"
+    },
+    {
+      "name": "Exercise and Fitness",
+      "description": "Routine activities to maintain physical fitness.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTJQaDtf5bfasXZhsK7I5PnilEl2cXs7xqxQ&s"
+    },
+    {
+      "name": "Mental Health",
+      "description": "Well-being of psychological and emotional state.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3_EVrXM8w7QcekEsLW3PJuxs-A_ut5Rclyw&s"
+    },
+    {
+      "name": "Chronic Diseases",
+      "description": "Ongoing illnesses requiring long-term care.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThwwLvEiWbP-9wA-2ffvfcCFVU2yJB1IpZwg&s"
+    },
+
+    {
+      "name": "Dental Health",
+      "description": "Oral hygiene and care for teeth and gums.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPqUrf2h6-N2hYVYESc6cFXPsJVqzxzF83Lg&s"
+    },
+    {
+      "name": "Pregnancy and Childbirth",
+      "description": "Care and monitoring during pregnancy.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXKFp-k04ECM4Zd5TSKB9vquKyADmUvZzphA&s"
+    },
+    {
+      "name": "Child Health",
+      "description": "Care and well-being of growing children.",
+      "image": "https://www.nfcr.org/wp-content/uploads/2020/10/10-ways-to-improve-your-childs-health-for-blog.jpg"
+    },
+    {
+      "name": "Senior Health",
+      "description": "Health care and lifestyle for the elderly.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Lt4ndezHDrY5qPxLVxRtsVYWLsCXY36Ivw&s"
+    },
+    {
       "name": "Immunity & Hygiene",
-      "description": "Maintaining a strong immune system is essential to protecting the body from illnesses and infections. A good immunity system helps you fight against bacteria, viruses, and other pathogens that could harm your health. Hygiene plays a crucial role in preventing the spread of infections. Simple habits like regular handwashing, sanitizing surfaces, and maintaining personal cleanliness can significantly reduce the risk of illnesses. A balanced diet, rich in vitamins, minerals, and antioxidants, further boosts immunity by helping the body produce white blood cells that protect against infections.",
-      "image": "https://plus.unsplash.com/premium_photo-1669150850575-3a730915165b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Strengthening the immune system and personal hygiene.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhhrI_wohumESSk9feRStht9bv-ebalBv5Q&s"
     },
     {
       "name": "Muscle Gain",
-      "description": "Muscle gain is a process that involves resistance training, proper nutrition, and sufficient rest to promote muscle hypertrophy. The body needs to be subjected to stress, usually through weightlifting or bodyweight exercises, in order to stimulate muscle growth. This process breaks down muscle fibers, and when they repair, they grow back stronger. Along with resistance training, consuming a protein-rich diet helps to repair and build muscle tissue. Adequate sleep and recovery time are also vital to the process, as muscle growth primarily occurs during rest periods.",
-      "image": "https://plus.unsplash.com/premium_photo-1722810760531-b2bffca4425d?q=80&w=2549&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Building muscle mass through diet and exercise.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoumDEblFAZiLd9O__y_OxIS7G4PatwV1Cqg&s"
     },
     {
       "name": "Allergy & Cold",
-      "description": "Allergies are the body's immune system response to foreign substances like pollen, dust, or pet dander. Symptoms can range from mild sneezing and itching to more severe reactions, such as anaphylaxis. Colds, on the other hand, are viral infections of the upper respiratory system. They often cause symptoms like runny nose, cough, and sore throat. Both allergies and colds can be managed with medications, including antihistamines for allergies and decongestants or antivirals for colds. Preventive measures, like avoiding allergens and frequent handwashing, can also help reduce the frequency of both.",
-      "image": "https://plus.unsplash.com/premium_photo-1716834532149-8f62ae47e38f?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Prevention and treatment of common allergies and colds.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WAsPed9hY3ENEZ1t1jXVFQlUx7Lj1lCCmA&s"
     },
     {
       "name": "Breathing Problem",
-      "description": "Breathing problems can arise from various conditions such as asthma, bronchitis, pneumonia, or even anxiety. These conditions can obstruct the airflow and make it difficult for the lungs to receive oxygen properly. Symptoms of breathing problems include shortness of breath, wheezing, chest tightness, and coughing. Effective treatments range from using inhalers for asthma, antibiotics for bacterial infections, or lifestyle changes to avoid triggers. Regular exercise, maintaining a healthy weight, and avoiding pollutants can help manage and even prevent many respiratory issues.",
-      "image": "https://plus.unsplash.com/premium_photo-1679709303617-9fe96edac0a3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Addressing respiratory issues and improving lung health.",
+      "image": "https://kingwooder.com/wp-content/uploads/2023/06/dizzy-aoman-breathing-problem.webp"
     },
     {
       "name": "Sexual Wellness",
-      "description": "Sexual wellness encompasses both physical and mental health, focusing on maintaining healthy sexual relationships, ensuring sexual function, and addressing any issues that may arise, such as erectile dysfunction, low libido, or sexual discomfort. Proper sexual wellness can be maintained through regular exercise, a balanced diet, and open communication with a partner. It's also important to consider mental health, as anxiety, stress, and depression can impact sexual function. Medical interventions like hormone therapy, counseling, or medications may be necessary for individuals facing difficulties.",
-      "image": "https://images.unsplash.com/photo-1535914254981-b5012eebbd15?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Improving overall sexual health and vitality.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW2I3SPikX2Admaab1v3PCJ3JtgQgUU8dfkw&s"
     },
     {
       "name": "Liver Ailment",
-      "description": "The liver is a vital organ responsible for detoxification, metabolism, and various other critical functions. Liver ailments, including hepatitis, cirrhosis, and fatty liver disease, can disrupt these processes. Symptoms of liver ailments may include jaundice, abdominal pain, fatigue, and swelling. Lifestyle changes, such as a healthy diet, avoiding alcohol, and maintaining a healthy weight, are essential for liver health. In some cases, medical treatments or surgeries may be required depending on the severity of the condition. Early detection and proper medical care can significantly improve outcomes for liver patients.",
-      "image": "https://images.unsplash.com/photo-1715529134931-b28c2984b79d?q=80&w=2538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Management and care for liver-related issues.",
+      "image": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/11/1684500-Liver-Problems-and-Their-Causes.png?w=1155&h=1436"
     },
     {
       "name": "Kidney Ailment",
-      "description": "Kidney ailments refer to diseases that affect the kidneys' ability to filter waste and excess fluid from the blood. Common conditions include kidney stones, chronic kidney disease (CKD), and urinary tract infections (UTIs). Symptoms may include fatigue, swelling, back pain, and changes in urine output. Proper hydration, a balanced diet, and regular check-ups can help prevent kidney problems. In cases of advanced kidney disease, dialysis or kidney transplantation may be required. Early intervention is key to managing kidney diseases effectively and preserving kidney function.",
-      "image": "https://plus.unsplash.com/premium_photo-1702598804759-8fb687f774fb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Diagnosis and care for kidney-related conditions.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C6uk_Yrlx3SB1EULi06bPfsMIH1yzdAVAw&s"
     },
     {
       "name": "Indigestion & Stomach Ailment",
-      "description": "Indigestion and stomach ailments, such as bloating, acid reflux, and irritable bowel syndrome (IBS), can cause discomfort and disrupt daily activities. Poor diet, stress, and certain medical conditions can trigger these issues. Indigestion can be alleviated with over-the-counter medications, herbal teas, and eating smaller, more frequent meals. It's also important to avoid foods that irritate the stomach, like spicy foods, caffeine, and alcohol. Regular exercise and proper hydration are essential for maintaining digestive health and preventing stomach ailments.",
-      "image": "https://plus.unsplash.com/premium_photo-1661780215564-b3a919366e6b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Addressing digestion-related health problems.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-Q2KbZeRh904hY4nhS0f401jG_Rf7FLguQ&s"
     },
     {
       "name": "Hair Care",
-      "description": "Hair care involves maintaining the health of your hair and scalp to promote growth and prevent damage. This includes using the right shampoo and conditioner, avoiding excessive heat styling, and protecting hair from environmental damage like UV rays and pollution. A nutritious diet rich in vitamins and minerals, particularly biotin, vitamin E, and omega-3 fatty acids, can also promote healthy hair growth. Regular scalp massages, trimming, and proper hydration are also important for maintaining the health and appearance of hair.",
-      "image": "https://plus.unsplash.com/premium_photo-1674841253486-3ea20b26fdf8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Promoting healthy hair growth and scalp care.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY2ebnjqY_eqN2CeMv0awCzVwmhbtmVLDSEw&s"
     },
     {
       "name": "Diabetes",
-      "description": "Diabetes is a chronic condition where the body is unable to properly regulate blood sugar levels. There are two types of diabetes: Type 1 and Type 2. Type 1 diabetes is typically diagnosed in childhood and requires insulin therapy, while Type 2 diabetes is often related to lifestyle factors and can sometimes be managed with diet, exercise, and medication. Monitoring blood sugar levels, eating a balanced diet, and staying physically active are critical to managing diabetes and preventing complications such as nerve damage, kidney disease, and heart disease.",
-      "image": "https://plus.unsplash.com/premium_photo-1680221453924-fcc37377f18e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Managing blood sugar levels and related health.",
+      "image": "https://www.hiranandanihospital.org/public/uploads/blogs/1686748634.jpg"
     },
     {
       "name": "Migraine & Headache",
-      "description": "Migraines and headaches are common neurological conditions that cause pain and discomfort in the head and neck area. Migraines are often more severe and are accompanied by symptoms like nausea, sensitivity to light, and visual disturbances. Tension headaches, on the other hand, are generally caused by stress or muscle tension. Treatment options include over-the-counter pain relievers, prescription medications for migraines, and lifestyle changes to prevent triggers. Regular sleep, staying hydrated, and managing stress levels can also help reduce the frequency of headaches and migraines.",
-      "image": "https://images.unsplash.com/photo-1532288561750-4d87ca934f0d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Relief and care for severe headaches or migraines.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw_GSK-fdEASbU5ktbLQ3KP58PcKBPP-tJzg&s"
     },
     {
       "name": "Sleep & Stress Disorder",
-      "description": "Sleep and stress disorders are closely linked, as stress can interfere with the ability to fall asleep, and lack of sleep can increase stress levels. Conditions like insomnia, sleep apnea, and anxiety disorders are common contributors to disrupted sleep patterns. Managing stress through relaxation techniques like yoga, meditation, and deep breathing exercises can promote better sleep. Establishing a regular sleep routine, limiting screen time before bed, and avoiding caffeine can also help improve sleep quality. In some cases, therapy or medication may be required to address these issues.",
-      "image": "https://plus.unsplash.com/premium_photo-1661779054933-3b929260ec41?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Addressing sleep problems and stress management.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvjup-0_rTISXFn3CgOPsYoxyz7f2PObZ05g&s"
     },
     {
       "name": "Cholesterol & Weight",
-      "description": "Cholesterol and weight management are closely tied to cardiovascular health. High cholesterol levels can increase the risk of heart disease, while being overweight can exacerbate this risk. Maintaining a healthy weight through a balanced diet and regular exercise is essential for controlling cholesterol levels and reducing the risk of heart disease. Foods rich in omega-3 fatty acids, fiber, and antioxidants can help lower cholesterol, while weight loss can improve overall health and reduce the strain on the heart and arteries.",
-      "image": "https://plus.unsplash.com/premium_photo-1718955640608-98c8134a81d1?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Balancing cholesterol and weight management.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuqfW16YEi1uMlQbeF3x7t2GgxD4MNP7F_hA&s"
     },
     {
       "name": "Piles & Fissures",
-      "description": "Piles (hemorrhoids) and fissures are conditions that affect the anal region. Piles are swollen blood vessels that cause pain, itching, and bleeding during bowel movements. Fissures are tears in the skin around the anus, which can also cause pain and bleeding. Both conditions can be triggered by constipation, diarrhea, or straining during bowel movements. Treatments include high-fiber diets, stool softeners, topical creams, and in severe cases, surgery. Avoiding prolonged sitting and practicing good hygiene can also prevent and relieve symptoms.",
-      "image": "https://media.post.rvohealth.io/wp-content/uploads/2024/09/3787751-What-the-Different-Types-of-Hemorrhoids-Look-Like-1296x728-header-body-1.png"
+      "description": "Care and treatment for hemorrhoids and fissures.",
+      "image": "https://www.drsamratjankar.com/wp-content/uploads/2022/10/Piles-anal-fissure-fistula.jpg"
     },
     {
       "name": "Skin Care",
-      "description": "Skin care involves a variety of practices aimed at maintaining the health and appearance of your skin. This includes cleansing, moisturizing, and protecting the skin from harmful UV rays. A healthy skin routine also involves exfoliating to remove dead skin cells, using serums for specific skin concerns, and staying hydrated. Eating a nutrient-rich diet, avoiding smoking, and managing stress are also important factors in maintaining healthy skin. For specific issues like acne, eczema, or aging, targeted treatments and skincare products may be needed.",
-      "image": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "description": "Preserving and improving skin health.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJsyZzeRIbGfL0vb36FR2HUDm6kLppQgnHPQ&s"
     }
   ]
 }
